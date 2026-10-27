@@ -9,6 +9,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KNQ53RTX');</script>
 <!-- End Google Tag Manager -->
+<!-- Define the listener BEFORE GTM fires the template -->
+  <script>
+    var consentCallbacks = [];
+    window.addConsentListenerExample = function (cb) {
+      consentCallbacks.push(cb);
+    };
+  </script>
 <meta charset = "utf-8">
 <meta name="google-site-verification" content="ouCouGqVLxuDeXoQCqp5EmB-gzAAtTMjPl36F5xg9vQ" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,5 +42,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><h3><a href = "https://iannpdx5.github.io/Spanish-Jeopardy/">Spanish Jeopardy</a></h3></li>
 </ul>
 </div>
+<div id="consent-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;padding:1rem;background:#222;color:#fff;">
+    We use cookies for analytics and ads.
+    <button id="accept-all">Accept all</button>
+    <button id="reject-all">Reject all</button>
+  </div>
+
+  <script>
+    function saveConsent(granted) {
+      var consent = {
+        adConsentGranted: granted,
+        adUserDataConsentGranted: granted,
+        adPersonalizationConsentGranted: granted,
+        analyticsConsentGranted: granted,
+        functionalityConsentGranted: granted,
+        personalizationConsentGranted: granted,
+        securityConsentGranted: true
+      };
+      // Cookie name must match COOKIE_NAME ('cookies') in the template
+      document.cookie = 'cookies=' + encodeURIComponent(JSON.stringify(consent)) +
+        ';max-age=31536000;path=/;SameSite=Lax';
+      consentCallbacks.forEach(function (cb) { cb(consent); });
+      document.getElementById('consent-banner').style.display = 'none';
+    }
+
+    if (document.cookie.indexOf('cookies=') === -1) {
+      document.getElementById('consent-banner').style.display = 'block';
+    }
+    document.getElementById('accept-all').onclick = function () { saveConsent(true); };
+    document.getElementById('reject-all').onclick = function () { saveConsent(false); };
+  </script>
 </body>
 </html>
