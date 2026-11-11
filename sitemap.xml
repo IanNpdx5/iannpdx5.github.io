@@ -18,4 +18,10 @@
   <url>
     <loc>https://iannpdx5.github.io/Jeopardy/</loc>
   </url>
+  <url>
+    <loc>https://iannpdx5.github.io/Jeopardy/JeopardyCreator/</loc>
+  </url>
+  <url>
+    <loc>https://iannpdx5.github.io/Jeopardy/JeopardyPlayer/</loc>
+  </url>
 </urlset>
