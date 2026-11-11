@@ -4,3 +4,5 @@ https://iannpdx5.github.io/A-Word-Game-Site/
 https://iannpdx5.github.io/Button-Clicker/
 https://iannpdx5.github.io/Spanish-Jeopardy/
 https://iannpdx5.github.io/Jeopardy/
+https://iannpdx5.github.io/Jeopardy/JeopardyCreator/
+https://iannpdx5.github.io/Jeopardy/JeopardyPlayer/
