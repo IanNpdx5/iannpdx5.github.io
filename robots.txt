@@ -1,5 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://iannpdx5.github.io/sitemap.txt
 Sitemap: https://iannpdx5.github.io/sitemap.xml
