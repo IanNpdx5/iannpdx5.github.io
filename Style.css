@@ -1,15 +1,4 @@
-body {
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 15px;
-}
-
-button {
-  font-family: "Orbitron", Arial, sans-serif;
-}
- :root {
+:root {
       --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
       --card-bg: rgba(255, 255, 255, 0.08);
       --card-border: rgba(255, 255, 255, 0.16);
@@ -28,7 +17,7 @@ button {
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: "Orbitron", 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg-gradient);
       color: var(--text-main);
       min-height: 100vh;
